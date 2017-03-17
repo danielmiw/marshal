@@ -4,16 +4,16 @@
 #        Self Plugin           #
 #                              #
 #                              #
-#     by @SoLiD ⇨Saeid⇦       #
+#     by @nigaa_marshal        #
+#         marshal              #
 #                              #
-#                              #
-#   Team Channel @BeyondTeam   #
-#	                       #
+# Team Channel @khaleq_marshal #
+#	                           #
 #                              #
 #     Update: 2 March 2017     #
 #                              #
-#       Special Thx To         # 
-#     @Exacute for idea        #
+#       Special Tnx To         # 
+#       @nigaa_marshal         #
 #                              #
 ################################
 ]]
