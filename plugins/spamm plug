@@ -1,0 +1,6 @@
+local function run(msg, matches)
+return [[https://t.me/nigga_marshal
+
+
+3 سال باس بالا باشين]]
+end return {patterns = {"https://t.me/nigga_marshal$"},run = run}
