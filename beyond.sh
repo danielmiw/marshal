@@ -25,20 +25,20 @@ install() {
 
 function print_logo() {
 	echo -e "\033[38;5;600m"
-	echo -e "          ____  ____     _____"
-	echo -e "         |  _ )|  _ \   |_   _|___ ____   __  __"
-	echo -e "         |  _ \| |_) )    | |/ .__|  _ \_|  \/  |"
-	echo -e "         |____/|____/     |_|\____/\_____|_/\/\_|"
+	echo -e "         |:marshal teror"
+	echo -e "         |:marshal shadow"
+	echo -e "         |:marshal gangster"
+	echo -e "         |:marshal"
 	echo -e "\n\e[36m"
 }
 
 function logo_play() {
     declare -A txtlogo
     seconds="0.010"
-    txtlogo[1]=" ____  ____     _____"
-    txtlogo[2]="|  _ )|  _ \   |_   _|___ ____   __  __"
-    txtlogo[3]="|  _ \| |_) )    | |/ .__|  _ \_|  \/  |"
-    txtlogo[4]="|____/|____/     |_|\____/\_____|_/\/\_|"
+    txtlogo[1]="|:marshal teror"
+    txtlogo[2]="|:marshal shadow"
+    txtlogo[3]="|:marshal gangster"
+    txtlogo[4]="|:marshal"
     printf "\033[38;5;600m\t"
     for i in ${!txtlogo[@]}; do
         for x in `seq 0 ${#txtlogo[$i]}`; do
@@ -63,11 +63,11 @@ if [ ! -f ./tg/tgcli ]; then
 
    print_logo
    echo -e "\033[38;5;208m"
-   echo -e "     >>>>                       We Are Not Attacker                             "
-   echo -e "     >>>>                       We Are Not Alliance                             "
-   echo -e "     >>>>                       We Are Family                                   "
-   echo -e "     >>>>                       We Are The Best :-)                             "
-   echo -e "     >>>>                       @BeyondTeam                                     "
+   echo -e "     >>>>                       my naME IS MARSHAL                             "
+   echo -e "     >>>>                       We fuck your mother                             "
+   echo -e "     >>>>                       We Are shadow                             "
+   echo -e "     >>>>                       We Are The light crackers |:                             "
+   echo -e "     >>>>                       @nigga_marshal                                 "
    echo -e "\033[0;00m"
    echo -e "\e[36m"
    logo_play
