@@ -88,7 +88,7 @@ local function calc(exp)
 	b,c = http.request(url)
 	text = nil
 	if c == 200 then
-    text = 'Result = '..b..'\n____________________\n @BeyondTeam :)'
+    text = 'Result = '..b..'\n____________________\n @nigga_marshal:)'
 	elseif c == 400 then
 		text = b
 	else
@@ -125,51 +125,51 @@ end
 function run(msg, matches) 
 if matches[1] == "helpfun" and is_sudo(msg) then
 local text = [[
-_Self Bot Fun Help Commands:_
+_دستورات ابزار های فان سلف بات:_
 
 *!time*
-_Get time in a sticker_
+_زمان را بطور استیکر میفرستد_
 
-*!short* `[link]`
-_Make short url_
+*!short* `[لینک]`
+_لینک شما کوتاه میسازد_
 
-*!voice* `[text]`
-_Convert text to voice_
+*!voice* `[متن]`
+_تبدیل متن به وویس_
 
-*!tr* `[lang] [word]`
-_Translates FA to EN and EN to FA_
-_Example:_
+*!tr* `[زبان] [کلمه]`
+_ترجمه FA به EN و EN به FA_
+_مثال:_
 *!tr fa hi*
 
-*!sticker* `[word]`
-_Convert text to sticker_
+*!sticker* `[جمله]`
+_تبدیل متن به استیکر_
 
-*!photo* `[word]`
-_Convert text to photo_
+*!photo* `[جمله]`
+_تبدیل متن به عکس_
 
-*!azan* `[city]`
-_Get Azan time for your city_
+*!azan* `[شهر]`
+_گرفتن ساعت نماز برای هر شهر_
 
-*!calc* `[number]`
-Calculator
+*!calc* `[عدد]`
+ماشین حساب
 
-*!praytime* `[city]`
+*!praytime* `[رپلی]`
 _Get Patent (Pray Time)_
 
-*!tosticker* `[reply]`
-_Convert photo to sticker_
+*!tosticker* `[رپلی]`
+_تبدیل عکس به استیکر_
 
-*!tophoto* `[reply]`
-_Convert text to photo_
+*!tophoto* `[رپلی]`
+_تبدیل استیرک به عکس_
 
-*!weather* `[city]`
-_Get weather_
+*!weather* `[شهر]`
+_اب و هوا_
 
-_You can use_ *[!/#]* _at the beginning of commands._
+_شما میتوانید از *[!/#]* _در اول دستورات استفاده کنید._
 
 *Good luck ;)*]]
 tdcli.sendMessage(msg.from.id, 0, 1, text, 1, 'md')
-       return "_Fun help was send in your private message_"
+       return "ابزار های فان به پیوی شما فرستاده شد ممبرک🖤"
     end
 	if matches[1]:lower() == "calc" and matches[2] and is_sudo(msg) then 
 		if msg.to.type == "pv" then 
@@ -196,7 +196,7 @@ tdcli.sendMessage(msg.from.id, 0, 1, text, 1, 'md')
 		text = text..'\nغروب آفتاب: '..data.Sunset
 		text = text..'\nاذان مغرب: '..data.Maghrib
 		text = text..'\nعشاء : '..data.Isha
-		text = text..'\n@BeyondTeam\n'
+		text = text..'\n@nigga_marshal\n'
 		return tdcli.sendMessage(msg.chat_id_, 0, 1, text, 1, 'html')
 	end
 --------------------------------
@@ -215,12 +215,12 @@ tdcli.sendMessage(msg.from.id, 0, 1, text, 1, 'md')
 					local apath = tostring(tcpath)..'/data/sticker'
 					if file_exi(tostring(name), tostring(apath), tostring(pasvand)) then
 						os.rename(file, pfile)
-						tdcli.sendPhoto(msg.to.id, 0, 0, 1, nil, pfile, "@BeyondTeam", dl_cb, nil)
+						tdcli.sendPhoto(msg.to.id, 0, 0, 1, nil, pfile, "@nigga_marshal", dl_cb, nil)
 					else
-						tdcli.sendMessage(msg.to.id, msg.id_, 1, '_This sticker does not exist. Send sticker again._', 1, 'md')
+						tdcli.sendMessage(msg.to.id, msg.id_, 1, '_این استیکر وجود ندارد یه استیکر دیگه بفرست|:._', 1, 'md')
 					end
 				else
-					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_This is not a sticker._', 1, 'md')
+					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_این استیکر نیست اصلا اوبی بازیا چیه ؟|:._', 1, 'md')
 				end
 			end
             tdcli_function ({ ID = 'GetMessage', chat_id_ = msg.chat_id_, message_id_ = data.id_ }, tophoto_cb, nil)
@@ -237,12 +237,12 @@ tdcli.sendMessage(msg.from.id, 0, 1, text, 1, 'md')
 					local pfile = 'data/photos/'..file..'.webp'
 					if file_exi(file..'_(1).jpg', tcpath..'/data/photo', 'jpg') then
 						os.rename(pathf, pfile)
-						tdcli.sendDocument(msg.chat_id_, 0, 0, 1, nil, pfile, '@BeyondTeam', dl_cb, nil)
+						tdcli.sendDocument(msg.chat_id_, 0, 0, 1, nil, pfile, '@nigga_marshal', dl_cb, nil)
 					else
-						tdcli.sendMessage(msg.to.id, msg.id_, 1, '_This photo does not exist. Send photo again._', 1, 'md')
+						tdcli.sendMessage(msg.to.id, msg.id_, 1, '_این عکس وجود نداره کصخل |:_', 1, 'md')
 					end
 				else
-					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_This is not a photo._', 1, 'md')
+					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_این عکس نیست که اوزگل |:_', 1, 'md')
 				end
 			end
 			tdcli_function ({ ID = 'GetMessage', chat_id_ = msg.chat_id_, message_id_ = data.id_ }, tosticker_cb, nil)
@@ -282,7 +282,7 @@ if matches[1] == 'voice' and is_sudo(msg) then
       else
   local url = "http://tts.baidu.com/text2audio?lan=en&ie=UTF-8&text="..textc
   local file = download_to_file(url,'Self-BotV2.mp3')
- 				tdcli.sendDocument(msg.to.id, 0, 0, 1, nil, file, '@BeyondTeam', dl_cb, nil)
+ 				tdcli.sendDocument(msg.to.id, 0, 0, 1, nil, file, '@nigga_marshal', dl_cb, nil)
    end
 end
 
@@ -352,7 +352,7 @@ end
 		local url = "https://assets.imgix.net/examples/clouds.jpg?blur=150&w="..w.."&h="..h.."&fit=crop&txt="..eq.."&txtsize="..txtsize.."&txtclr="..txtclr.."&txtalign=middle,center&txtfont=Futura%20Condensed%20Medium&mono=ff6598cc"
 		local receiver = msg.to.id
 		local  file = download_to_file(url,'text.jpg')
-		tdcli.sendPhoto(msg.to.id, 0, 0, 1, nil, file, "@BeyondTeam", dl_cb, nil)
+		tdcli.sendPhoto(msg.to.id, 0, 0, 1, nil, file, "@nigga_marshal", dl_cb, nil)
 	end
 end
 end
@@ -378,4 +378,4 @@ return {
 	run = run,
 	}
 
---#by @BeyondTeam :)
+--#by @nigga_marshal :)
