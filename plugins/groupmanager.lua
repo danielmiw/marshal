@@ -1,5 +1,5 @@
---begin groupmanager by @BeyondTeam :)
---This Is Self Bot Based On BDReborn :D
+--begin groupmanager by @nigga _marshal |:
+--This Is Self Bot Based On shadow |:
 local function action_by_reply(arg, data)
    local cmd = arg.cmd
   if data.sender_user_id_ then
@@ -126,16 +126,16 @@ tdcli.deleteMessagesFromUser(msg.to.id, matches[2], dl_cb, nil)
 if matches[1] == 'setlink' then
             hash = 'gplink:'..chat
             redis:set(hash, matches[2])
-    return "*Newlink* _has been set_"
+    return "*Newlink* _لینک _"
   end
     if matches[1] == 'link' and is_sudo(msg) then
             hash = 'gplink:'..chat
             local linkgp = redis:get(hash)
             if not linkgp then
-     return "_First set a link with_ *using ➣ /setlink link*"
+     return "_اول لینک را تنظیم کنید➣ /setlink link*"
          end
         tdcli.sendMessage(user, "", 1, "<b>Group Link :</b>\n"..linkgp, 1, 'html')
-            return "_Link was send in your private message_"
+            return "_لینک به PV ارسال شد_"
      end
 if matches[1] == "setname" and matches[2] then
 local gp_name = string.gsub(matches[2], "_","")
@@ -144,10 +144,10 @@ end
 if matches[1] == 'tosuper' then
 local id = msg.to.id
      if msg.to.type == "channel" then
-   return "_This Chat Is Already SuperGroup...!_"
+   return "_سوپر گپه اوزگل!_"
      else
    tdcli.migrateGroupChatToChannelChat(id)
-    return '_Group Has Been Changed To SuperGroup!_'
+    return '_سوپر گپ شد ممبرک🖤!_'
    end
 end
      if msg.to.type == "channel" then
@@ -155,26 +155,26 @@ end
     if matches[2] == "all" then
                     local hash = 'mute_gp:'..chat
                     if redis:get(hash) then
-                    return "Mute All Is Already Enabled"
+                    return "سکوت فعال"
                 else
                     redis:set(hash, true)
-                    return "Mute All Has Been Enabled"
+                    return "سکوت فعال بود ممبرک"
                      end
                   end
     elseif matches[1] == "unmute" then
       if matches[2] == 'all' then
                     local hash = 'mute_gp:'..chat
                     if not redis:get(hash) then
-                    return "Mute All Is Not Enabled"
+                    return "سکوت غیرفعاله ممبرک"
                 else
                     redis:del(hash)
-                    return "Mute All Has Been Disabled"
+                    return "سکوت غیر فعال شد ممبرک"
                    end
 					   end
              end
   if matches[1] == "setdes" and matches[2] then
    tdcli.changeChannelAbout(chat, matches[2], dl_cb, nil)
-    return "*Description* _has been set_"
+    return "توضیحات تنظیم شد"
   end
 if matches[1] == "del" then
    del_msg(msg.to.id, msg.reply_id)
@@ -182,11 +182,11 @@ del_msg(msg.to.id, msg.id)
 end
 if matches[1] == "pin" and msg.reply_id then
 tdcli.pinChannelMessage(msg.to.id, msg.reply_id, 1, dl_cb, nil)
-return "*Message Has Been Pinned*"
+return "پیام پین شد"
 end
 if matches[1] == 'unpin' then
 tdcli.unpinChannelMessage(msg.to.id, dl_cb, nil)
-return "*Pin message has been unpinned*"
+return "پیام ان پین شد عیششششش"
          end
       end
    end
